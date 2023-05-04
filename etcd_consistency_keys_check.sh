@@ -1,5 +1,17 @@
 #!/bin/bash
 
+#################################
+#- Run this script on a Master node to verify if etcd database has a null or inconsistent keys.
+#- Verified on Openshift 4.10.52
+#
+#- First exec etcd env to node
+#$ ssh -i <identity> core@master
+#core@master$ sudo -i
+#root@master# crictl exec -ti $(crictl ps --label "io.kubernetes.container.name=etcdctl" -q) /bin/sh
+#################################
+
+
+
 # Set key prefix to be checked
 KEY_PREFIX="/"
 
